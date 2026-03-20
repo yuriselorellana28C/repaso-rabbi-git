@@ -2,7 +2,9 @@ package com.bank.consumer;
 
 public class SecondMinMax {
 
-    public static int[] secondMinMax(int[] numbers) {
+    public static void main(String[] args) {
+
+        int[] numbers = {7, 2, 9, 4, 6, 1, 8};
 
         int min1 = Integer.MAX_VALUE;
         int min2 = Integer.MAX_VALUE;
@@ -28,16 +30,7 @@ public class SecondMinMax {
             }
         }
 
-        return new int[]{min2, max2};
-    }
-
-    public static void main(String[] args) {
-
-        int[] arr = {7, 2, 9, 4, 1, 5};
-
-        int[] result = secondMinMax(arr);
-
-        System.out.println("Segundo menor: " + result[0]);
-        System.out.println("Segundo mayor: " + result[1]);
+        System.out.println("Segundo menor: " + min2);
+        System.out.println("Segundo mayor: " + max2);
     }
 }
