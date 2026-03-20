@@ -2,13 +2,26 @@ package com.bank.consumer;
 
 public class ScoreArray {
 
+    /**
+     * Calcula el puntaje de un arreglo según las reglas:
+     * +1 por cada número par
+     * +3 por cada número impar (excepto 5)
+     * +5 por cada número igual a 5
+     * El 0 se considera par
+     *
+     * Complejidad temporal: O(n)
+     * Se recorre el arreglo una sola vez.
+     *
+     * Complejidad espacial: O(1)
+     * No se utilizan estructuras adicionales.
+     */
     public static int score(int[] numbers) {
         int total = 0;
 
-        for (int num : numbers) {
-            if (num == 5) {
+        for (int n : numbers) {
+            if (n == 5) {
                 total += 5;
-            } else if (num % 2 == 0) {
+            } else if (n % 2 == 0) {
                 total += 1;
             } else {
                 total += 3;
@@ -19,13 +32,10 @@ public class ScoreArray {
     }
 
     public static void main(String[] args) {
-        int[] ejemplo1 = {1, 2, 3, 4, 5};
-        System.out.println(score(ejemplo1)); // 13
+        // Arreglo de prueba
+        int[] arr = {1, 2, 3, 4, 5};
 
-        int[] ejemplo2 = {17, 19, 21};
-        System.out.println(score(ejemplo2)); // 9
-
-        int[] ejemplo3 = {5, 5, 5};
-        System.out.println(score(ejemplo3)); // 15
+        // Mostrar resultado
+        System.out.println("Resultado: " + score(arr));
     }
 }

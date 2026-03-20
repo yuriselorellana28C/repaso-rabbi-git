@@ -18,7 +18,8 @@ public class App {
             Connection connection = factory.newConnection();
             Channel channel = connection.createChannel();
 
-            String mensaje = "Nueva transaccion enviada desde Producer";
+            String mensaje = "Mensaje modificado desde examen";
+            System.out.println("producer ejecutandose correctamente");
 
             for (String banco : BANCOS) {
                 channel.queueDeclare(banco, false, false, false, null);
